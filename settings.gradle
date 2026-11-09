@@ -6,10 +6,6 @@ pluginManagement {
 		}
 		mavenCentral()
 		gradlePluginPortal()
-		maven {
-			name = 'Aliyun Fabric Mirror'
-			url = 'https://maven.aliyun.com/repository/fabric'
-		}
 	}
 }
 

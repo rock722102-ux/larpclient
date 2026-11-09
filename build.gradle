@@ -1,6 +1,17 @@
-plugins {
-	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+buildscript {
+	repositories {
+		maven {
+			name = 'Fabric'
+			url = 'https://maven.fabricmc.net/'
+		}
+		mavenCentral()
+	}
+	dependencies {
+		classpath "net.fabricmc:fabric-loom:${loom_version}"
+	}
 }
+
+apply plugin: 'fabric-loom'
 
 version = "${project.mod_version}+mc${project.minecraft_version}"
 group = project.maven_group
@@ -14,10 +25,6 @@ repositories {
 	maven {
 		name = 'Fabric'
 		url = 'https://maven.fabricmc.net/'
-	}
-	maven {
-		name = 'Aliyun Mirror'
-		url = 'https://maven.aliyun.com/repository/fabric'
 	}
 }
 
