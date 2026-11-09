@@ -1,0 +1,60 @@
+﻿To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.5/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+gradlew.bat : 
+En línea: 1 Carácter: 1
++ & .\gradlew.bat build -x 
+test --no-daemon 2>&1 | 
+Out-File -FilePath b ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo         
+     : NotSpecified: (:St  
+  ring) [], RemoteExcept   
+ ion
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 
+FAILURE: Build failed with 
+an exception.
+
+* Where:
+Build file 'C:\Users\mazza\
+Downloads\larpclient-src\bu
+ild.gradle' line: 2
+
+* What went wrong:
+Plugin [id: 'net.fabricmc.f
+abric-loom', version: 
+'1.15'] was not found in 
+any of the following 
+sources:
+
+- Gradle Core Plugins 
+(plugin is not in 
+'org.gradle' namespace)
+- Plugin Repositories 
+(could not resolve plugin 
+artifact 'net.fabricmc.fabr
+ic-loom:net.fabricmc.fabric
+-loom.gradle.plugin:1.15')
+  Searched in the 
+following repositories:
+    Fabric(https://maven.fa
+bricmc.net/)
+    MavenRepo
+    Gradle Central Plugin 
+Repository
+
+* Try:
+> Run with --stacktrace 
+option to get the stack 
+trace.
+> Run with --info or 
+--debug option to get more 
+log output.
+> Run with --scan to get 
+full insights.
+> Get more help at 
+https://help.gradle.org.
+
+BUILD FAILED in 14s
